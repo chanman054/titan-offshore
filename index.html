@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Titan Offshore LLC | Marine Asset Acquisition & Operations</title>
+<meta name="description" content="Titan Offshore LLC specializes in offshore marine vessel acquisition, oil and gas asset operations, and commercial maritime services in the U.S. Gulf of Mexico.">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #0a2540;
+  --accent: #c49a3d;
+  --text: #1a1a1a;
+  --muted: #555;
+  --border: #e5e5e5;
+  --bg-light: #f7f5f0;
+  --bg-white: #ffffff;
+  --max-width: 1100px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--bg-white);
+}
+
+/* Navigation */
+nav {
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #0a2540 0%, #1a3a5c 100%);
+  color: white;
+  padding: 100px 24px 80px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.85);
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--primary);
+  padding: 14px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(196,154,61,0.3);
+}
+
+@media (max-width: 700px) {
+  .hero h1 { font-size: 32px; }
+  .hero { padding: 60px 24px 50px; }
+}
+
+/* Section base */
+section {
+  padding: 80px 24px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.section-header p {
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About */
+.about {
+  background: var(--bg-light);
+}
+
+.about-content {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 32px 28px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.service-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.service-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(196,154,61,0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-icon svg {
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+}
+
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Capabilities */
+.capabilities {
+  background: var(--bg-light);
+}
+
+.capability-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.capability-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--bg-white);
+  padding: 18px 22px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.capability-check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.capability-item span:last-child {
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+
+.contact-item {
+  padding: 24px;
+}
+
+.contact-item-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact-item-value {
+  font-size: 15px;
+  color: var(--primary);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.contact-item-value a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.contact-item-value a:hover {
+  color: var(--accent);
+}
+
+/* Legal pages */
+.legal-section {
+  background: var(--bg-light);
+  padding: 60px 24px;
+}
+
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.legal-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.legal-content h2:first-child {
+  margin-top: 0;
+}
+
+.legal-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.legal-content p,
+.legal-content ul {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.legal-content ul {
+  padding-left: 24px;
+}
+
+.legal-content li {
+  margin-bottom: 6px;
+}
+
+.legal-meta {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: rgba(255,255,255,0.7);
+  padding: 40px 24px 32px;
+  text-align: center;
+}
+
+footer .container {
+  max-width: var(--max-width);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-info {
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+
+.footer-info p {
+  margin-bottom: 4px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="#top" class="logo">TITAN<span>OFFSHORE</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <div class="hero-content">
+    <h1>Marine Asset Acquisition & Offshore Operations</h1>
+    <p>Titan Offshore LLC is a Texas-based commercial maritime company specializing in offshore vessel acquisition, oil and gas asset operations, and marine equipment services across the U.S. Gulf of Mexico.</p>
+    <a href="#contact" class="cta-button">Get in Touch</a>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>About Titan Offshore</h2>
+      <p>Trusted commercial marine services backed by deep industry expertise</p>
+    </div>
+    <div class="about-content">
+      <p>Titan Offshore LLC is a privately-held Texas limited liability company focused on the acquisition, operation, and disposition of commercial marine assets and offshore oil and gas equipment. Headquartered in Dallas, Texas, our operations extend across the Gulf of Mexico through partner relationships in Louisiana and Texas.</p>
+      <p>Our business model centers on identifying undervalued offshore assets, executing clean transactions, and either operating them productively or restoring them to commercial service for resale. We work directly with major industry counterparties including drilling contractors, vessel operators, and oilfield service providers.</p>
+      <p>Titan Offshore is registered with the U.S. Government System for Award Management (SAM.gov) and maintains an active CAGE Code (0AVQ6) for federal contracting eligibility.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Comprehensive offshore marine and oilfield asset solutions</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>
+        </div>
+        <h3>Vessel Acquisition</h3>
+        <p>Strategic acquisition of commercial marine vessels including crew boats, supply vessels, and specialized offshore equipment from drilling contractors and operators.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3>Asset Operations</h3>
+        <p>Day-to-day operational management of offshore assets including drilling rigs, barges, and support vessels in the U.S. Gulf of Mexico.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3>Vessel Chartering</h3>
+        <p>Bareboat and time charter arrangements for U.S. Coast Guard certified passenger vessels supporting offshore operations.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3>Marine Equipment</h3>
+        <p>Procurement and resale of marine diesel engines, propulsion equipment, generator sets, and offshore parts inventory.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3>Capital Advisory</h3>
+        <p>Strategic capital structuring for offshore asset acquisitions, including financing introductions and transaction support.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+        <h3>Government Contracting</h3>
+        <p>SAM.gov registered with active CAGE Code 0AVQ6 for federal contracting opportunities in the maritime and offshore sectors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="capabilities" class="capabilities">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Capabilities</h2>
+      <p>Operational expertise across the offshore marine sector</p>
+    </div>
+    <div class="capability-list">
+      <div class="capability-item">
+        <div class="capability-check">✓</div>
+        <span>USCG Documented Vessel Operations</span>
+      </div>
+      <div class="capability-item">
+        <div class="capability-check">✓</div>
+        <span>Gulf of Mexico Coastwise Service</span>
+      </div>
+      <div class="capability-item">
+        <div class="capability-check">✓</div>
+        <span>Inspected Passenger Vessel Class</span>
+      </div>
+      <div class="capability-item">
+        <div class="capability-check">✓</div>
+        <span>Offshore Drilling Asset Acquisition</span>
+      </div>
+      <div class="capability-item">
+        <div class="capability-check">✓</div>
+        <span>Marine Diesel & Propulsion Equipment</span>
+      </div>
+      <div class="capability-item">
+        <div class="capability-check">✓</div>
+        <span>Federal Contracting (SAM.gov Registered)</span>
+      </div>
+      <div class="capability-item">
+        <div class="capability-check">✓</div>
+        <span>Bareboat & Time Charter Arrangements</span>
+      </div>
+      <div class="capability-item">
+        <div class="capability-check">✓</div>
+        <span>Asset Disposition & Resale</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2>Contact Us</h2>
+      <p>For business inquiries, partnerships, and service requests</p>
+    </div>
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-item-label">Email</div>
+        <div class="contact-item-value"><a href="mailto:mullenc148@gmail.com">mullenc148@gmail.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Office</div>
+        <div class="contact-item-value">4507 March Avenue<br>Dallas, TX 75209</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Federal ID</div>
+        <div class="contact-item-value">CAGE Code: 0AVQ6<br>SAM.gov Registered</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="terms" class="legal-section">
+  <div class="legal-content">
+    <h2>Terms of Service</h2>
+    <p class="legal-meta">Last updated: April 27, 2026</p>
+
+    <p>These Terms of Service ("Terms") govern your use of services provided by Titan Offshore LLC ("Titan Offshore," "we," "us," or "our"), a Texas limited liability company. By engaging with our services, you agree to these Terms.</p>
+
+    <h3>1. Services</h3>
+    <p>Titan Offshore provides commercial marine services including, but not limited to: vessel acquisition and disposition, offshore asset operations, marine equipment procurement and resale, vessel chartering, and related advisory services. Specific service terms are governed by individual written agreements between Titan Offshore and its counterparties.</p>
+
+    <h3>2. Business Transactions</h3>
+    <p>All vessel sales, charter agreements, equipment transactions, and service arrangements are governed by separately executed written agreements specific to each transaction. These Terms do not modify or supersede the terms of any individual transaction agreement.</p>
+
+    <h3>3. Payment Terms</h3>
+    <p>Payment terms are specified in individual transaction agreements. We accept wire transfers, credit card payments through approved payment processors, and other payment methods as agreed. All amounts are in U.S. dollars unless otherwise specified.</p>
+
+    <h3>4. Limitation of Liability</h3>
+    <p>To the maximum extent permitted by law, Titan Offshore's liability for any claim arising from our services is limited to the amount paid by the counterparty for the specific service giving rise to the claim. We are not liable for indirect, incidental, special, or consequential damages.</p>
+
+    <h3>5. Governing Law</h3>
+    <p>These Terms are governed by the laws of the State of Texas, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be resolved in the state or federal courts located in Dallas County, Texas.</p>
+
+    <h3>6. Modifications</h3>
+    <p>We reserve the right to modify these Terms at any time. Updated Terms will be posted on this website with a revised "Last updated" date. Continued use of our services after such modifications constitutes acceptance of the updated Terms.</p>
+
+    <h3>7. Contact</h3>
+    <p>Questions regarding these Terms should be directed to mullenc148@gmail.com.</p>
+  </div>
+</section>
+
+<section id="privacy" class="legal-section" style="background: white;">
+  <div class="legal-content">
+    <h2>Privacy Policy</h2>
+    <p class="legal-meta">Last updated: April 27, 2026</p>
+
+    <p>This Privacy Policy describes how Titan Offshore LLC ("Titan Offshore," "we," "us," or "our") collects, uses, and protects information.</p>
+
+    <h3>1. Information We Collect</h3>
+    <p>We collect information that you provide directly to us, including:</p>
+    <ul>
+      <li>Contact information (name, email address, phone number, business address)</li>
+      <li>Business information (company name, role, federal tax identification numbers)</li>
+      <li>Transaction information related to our services</li>
+      <li>Payment information processed through secure third-party payment processors</li>
+    </ul>
+
+    <h3>2. How We Use Information</h3>
+    <p>We use information to provide and improve our services, communicate with counterparties, process transactions, comply with legal obligations, and protect our legitimate business interests.</p>
+
+    <h3>3. Information Sharing</h3>
+    <p>We do not sell personal information. We may share information with: service providers and contractors who assist our operations; payment processors for transaction processing; legal and financial advisors; and government authorities where required by law.</p>
+
+    <h3>4. Data Security</h3>
+    <p>We implement reasonable administrative, technical, and physical safeguards to protect information against unauthorized access, alteration, or destruction. However, no method of transmission or storage is completely secure.</p>
+
+    <h3>5. Payment Processing</h3>
+    <p>Credit card payments are processed by third-party payment processors. We do not store full credit card information on our systems. Payment processors are subject to their own privacy policies.</p>
+
+    <h3>6. Your Rights</h3>
+    <p>You may request access to, correction of, or deletion of your personal information by contacting us at mullenc148@gmail.com. We will respond to requests within a reasonable timeframe consistent with applicable law.</p>
+
+    <h3>7. Cookies and Analytics</h3>
+    <p>This website may use cookies and similar technologies for basic functionality and analytics. You can control cookie preferences through your browser settings.</p>
+
+    <h3>8. Changes to This Policy</h3>
+    <p>We may update this Privacy Policy from time to time. Updates will be posted on this website with a revised "Last updated" date.</p>
+
+    <h3>9. Contact</h3>
+    <p>Privacy-related questions should be directed to mullenc148@gmail.com.</p>
+  </div>
+</section>
+
+<section id="refunds" class="legal-section">
+  <div class="legal-content">
+    <h2>Refund & Returns Policy</h2>
+    <p class="legal-meta">Last updated: April 27, 2026</p>
+
+    <p>Titan Offshore LLC engages in business-to-business commercial transactions involving marine vessels, offshore equipment, and related services. The following policy applies to all transactions unless explicitly modified by a separately executed written agreement.</p>
+
+    <h3>1. General Policy</h3>
+    <p>All vessel sales, equipment sales, and service transactions are final upon completion of payment and delivery, unless otherwise specified in the underlying transaction agreement. Vessels and equipment are sold "AS IS, WHERE IS, WITH ALL FAULTS" unless explicitly warranted in writing.</p>
+
+    <h3>2. Service Refunds</h3>
+    <p>Refunds for advisory and consulting services may be considered on a case-by-case basis where services have not yet been substantially performed. Requests for service refunds must be submitted in writing within 14 days of service initiation.</p>
+
+    <h3>3. Disputed Transactions</h3>
+    <p>Any dispute regarding a payment or transaction should be raised in writing within 30 days of the transaction. We will investigate disputes in good faith and respond within a reasonable timeframe. Unresolved disputes are subject to the dispute resolution provisions in the applicable transaction agreement.</p>
+
+    <h3>4. Credit Card Disputes</h3>
+    <p>For credit card transactions, counterparties retain whatever chargeback rights are provided by their card issuer. We request that counterparties contact us directly before initiating a chargeback so we can attempt to resolve the matter promptly.</p>
+
+    <h3>5. Refund Process</h3>
+    <p>Approved refunds will be issued through the original payment method when reasonably possible. Wire transfer refunds typically process within 5-7 business days. Credit card refunds typically appear on statements within 5-10 business days.</p>
+
+    <h3>6. Contact for Refund Requests</h3>
+    <p>Refund requests and questions should be directed to mullenc148@gmail.com with subject line "Refund Request."</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#terms">Terms</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#refunds">Refunds</a>
+    </div>
+    <div class="footer-info">
+      <p>&copy; 2026 Titan Offshore LLC. All rights reserved.</p>
+      <p>4507 March Avenue, Dallas, TX 75209 | CAGE Code: 0AVQ6</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
